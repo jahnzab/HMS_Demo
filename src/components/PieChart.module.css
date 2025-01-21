@@ -1,0 +1,130 @@
+.container {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px 16px;
+  width: 46%;
+  margin-top: 2.5%;
+  
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.title {
+  color: var(--Grey-Grey-800, #383e49);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.filterButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px 8px 8px;
+  border: 1px solid var(--Grey-Grey-400, #858d9d);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--Grey-Grey-500, #667085);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.filterButton:hover {
+  background-color: var(--Grey-Grey-50, #f7f9fc);
+}
+
+.filterButton:focus {
+  outline: 2px solid var(--Primary-Primary-600, #1366d9);
+  outline-offset: 2px;
+}
+
+.chartContainer {
+  display: flex;
+  gap: 20px;
+}
+
+.yAxis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--Grey-Grey-400, #858d9d);
+  font-size: 12px;
+  padding-right: 10px;
+ 
+}
+
+.chart {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.gridLines {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+.gridLine {
+  height: 1px;
+  background-color: var(--Grey-Grey-50, #f7f9fc);
+}
+
+.bars {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 200px;
+  position: relative;
+  margin-top: -200px;
+}
+
+.barGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 22px;
+}
+
+.bar {
+  width: 100%;
+  background-color: var(--Primary-Primary-600, #1366d9);
+  border-radius: 0 0 2px 2px;
+  transition: height 0.3s ease;
+}
+
+.monthLabel {
+  margin-top: 8px;
+  color: var(--Grey-Grey-400, #858d9d);
+  font-size: 12px;
+  
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+  }
+
+  .chartContainer {
+    gap: 7px;
+  }
+
+  .barGroup {
+    width: 18px;
+  }
+}
+
+[data-reduced-motion] .bar {
+  transition: none;
+}
+
+.bar:focus {
+  outline: 2px solid var(--Primary-Primary-600, #1366d9);
+  outline-offset: 2px;
+}

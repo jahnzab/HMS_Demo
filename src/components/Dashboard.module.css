@@ -1,0 +1,385 @@
+.dashboard {
+  background-color: var(--Dashboard, #eef0f2);
+  min-height: 100vh;
+  display: flex;
+}
+
+.dashboardContainer {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  padding: 20px;
+}
+
+.sidebar {
+  background-color: white;
+  width: 280px;
+  padding: 32px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+  padding: 0 12px;
+}
+
+.logoImage {
+  width: 30px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.logoText {
+  color: var(--Primary-Primary-600, #1366d9);
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sidebarItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: var(--Grey-Grey-600, #5d6679);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sidebarItem:hover {
+  background-color: var(--Primary-Primary-50, #e8f1fd);
+  color: var(--Primary-Primary-600, #1366d9);
+}
+
+.sidebarItemActive {
+  background-color: var(--Primary-Primary-50, #e8f1fd);
+  color: var(--Primary-Primary-600, #1366d9);
+}
+
+.sidebarIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header {
+  background-color: white;
+  padding: 28px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.searchBarContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--Grey-Grey-50, #f7f9fc);
+  border: 1px solid var(--Dashboard, #eef0f2);
+  border-radius: 4px;
+  padding: 8px 16px;
+  width: 400px;
+}
+
+.searchInput {
+  border: none;
+  background: none;
+  width: 100%;
+  font-size: 16px;
+  color: var(--Grey-Grey-600, #5d6679);
+}
+
+.searchInput::placeholder {
+  color: var(--Grey-Grey-400, #858d9d);
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.notificationButton {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.userAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.dateBar {
+  background-color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.currentDate {
+  margin-left: 35%;
+  color: var(--Grey-Grey-600, #5d6679);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.createBookingButton {
+  background-color: var(--Primary-Primary-500, #1570ef);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 24px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.statistics {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.statCard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.statLabel {
+  color: var(--Grey-Grey-400, #858d9d);
+  font-size: 14px;
+}
+
+.statType {
+  color: var(--Grey-Grey-600, #5d6679);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.statValue {
+  color: var(--Primary-Primary-600, #1366d9);
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.roomOverview {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.sectionTitle {
+  color: var(--Grey-Grey-800, #383e49);
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.roomGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.roomCard {
+  border: 1px solid var(--Grey-Grey-100, #d0d3d9);
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1),
+    0px 1px 2px rgba(16, 24, 40, 0.06);
+}
+
+.roomCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.dealsBadge {
+  background-color: var(--Success-Success-100, #b6e9d1);
+  color: var(--Success-Success-700, #0d824b);
+  padding: 2px 8px;
+  flex-shrink: 0;
+  border-radius: 4px;
+}
+
+.roomType {
+  color: var(--Grey-Grey-600, #5d6679);
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.roomAvailability {
+  color: var(--Grey-Grey-800, #383e49);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.priceAmount {
+  color: var(--Primary-Primary-600, #1366d9);
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.priceUnit {
+  color: var(--Grey-Grey-400, #858d9d);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.statusSection {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.roomStatus,
+.floorStatus {
+  flex: 1;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.roomStatus h3,
+.floorStatus h3 {
+  color: var(--Grey-Grey-800, #383e49);
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.roomStatusDetails,
+.floorStatsLegend {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detailRow,
+.legendItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  color: var(--Grey-Grey-600, #5d6679);
+}
+
+.occupiedValue,
+.cleanValue,
+.dirtyValue,
+.inspectedValue {
+  font-weight: 500;
+}
+
+.floorStats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.floorPlanImage {
+  width: 250px;
+  height: 150px;
+}
+
+.completionRate {
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--Primary-Primary-600, #1366d9);
+}
+
+.completedIndicator {
+  background-color: var(--Primary-Primary-400, #448df2);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-left: 280px;
+}
+.pendingIndicator {
+  background-color: var(--Dashboard, #eef0f2);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-left: 280px;
+}
+.feedbackSection {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 45.5%;
+  margin-top: -263px;
+  margin-left:51%;
+}
+
+.feedbackHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.feedbackTitle {
+  color: var(--Grey-Grey-800, #383e49);
+  font-size: 20px;
+}
+
+.moreOptions {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.feedbackList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.feedbackItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--Grey-Grey-100, #d0d3d9);
+}
+
+.guestName,
+.roomNumber {
+  font-weight: 500;
+}
+
+.feedbackMessage {
+  color: var(--Grey-Grey-400, #858d9d);
+}
